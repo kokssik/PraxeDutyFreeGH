@@ -1,4 +1,4 @@
-namespace dutyfreeButReact;
+namespace DutyFreePraxe.Models;
 
 public class Products
 {
