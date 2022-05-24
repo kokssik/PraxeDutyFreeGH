@@ -20,6 +20,7 @@ namespace DutyFreePraxe.Controllers
 
         public IActionResult Privacy()
         {
+            // return Content("Hello, MVC world!");
             return View();
         }
 

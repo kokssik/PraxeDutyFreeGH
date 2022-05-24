@@ -1,0 +1,48 @@
+@* @model DutyFreePraxe.Models.Products *@
+
+@* import model as an array *@
+@model IEnumerable<DutyFreePraxe.Models.Products>
+
+@{
+}
+
+<h2>List of products</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Produkt
+            </th>
+            <th>
+                @* obrazek *@
+            </th>
+            <th>
+                Cena za ks
+            </th>
+            <th>
+                Pocet na skladě
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <img height="100" src=@Html.DisplayFor(modelItem => item.ImageUrl) />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
