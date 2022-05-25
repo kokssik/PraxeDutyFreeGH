@@ -14,7 +14,7 @@ namespace DutyFreePraxe.Controllers
         }
 
         // this function returns the HTML for the page called Products.cshtml
-        public IActionResult ProductList()
+        public IActionResult Administration()
         {
 
             // this variable has the data for the page called Products.cshtml
