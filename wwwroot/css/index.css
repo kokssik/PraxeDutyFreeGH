@@ -1,3 +1,8 @@
-ChooseFood  {
-    align-self: center;
+.header1 {
+    margin: 90px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.header2  {
+    font-size: 20px;
 }
