@@ -17,4 +17,5 @@ body {
     background-size: cover;
     height: 540px;
     background-position: 50% 12%;
+    background-position: absolute;
 }
