@@ -1,6 +1,7 @@
 using DutyFreePraxe.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using DutyFreePraxe.DAL;
 
 namespace DutyFreePraxe.Controllers
 {
@@ -41,6 +42,30 @@ namespace DutyFreePraxe.Controllers
             // p.Name
             // TODO: add to db or something
             // arr.Add(new Models.Products { Name = p.Name, ImageUrl = p.ImageUrl, Price = p.Price, Quantity = p.Quantity }); // doesnt work TODO: fix
+            using (var db = new StuffContext())
+            {
+                var pro = new Models.Products
+                {
+                    Name = p.Name,
+                    ImageUrl = p.ImageUrl,
+                    Price = p.Price,
+                    Quantity = p.Quantity
+                };
+
+                db.products.Add(pro);
+                db.SaveChanges(); // save changes to db
+
+                // Display all Blogs from the database
+                // var query = from b in db.products
+                //             orderby b.Name
+                //             select b;
+
+                // foreach (var item in query)
+                // {
+                //     Console.WriteLine(item.Name);
+                // }
+
+            }
             return View();
         }
 
