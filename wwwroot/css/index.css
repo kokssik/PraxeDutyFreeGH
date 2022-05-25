@@ -1,8 +1,20 @@
-.header1 {
-    margin: 90px;
+.headerMain {
+    margin-top: 40px;
+    margin-bottom: 95px;
     font-family: 'Quicksand', sans-serif;
+    font-size: 70px;
 }
 
 .header2  {
-    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px;
+    
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/2103947/pexels-photo-2103947.jpeg?cs=srgb&dl=pexels-alexander-mils-2103947.jpg&fm=jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 540px;
+    background-position: 50% 12%;
 }
