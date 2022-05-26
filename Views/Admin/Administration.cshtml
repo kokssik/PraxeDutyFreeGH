@@ -8,14 +8,14 @@
 
     <link rel="stylesheet" href="~/css/Admin.css">
 
-<h2>List of products</h2>
+<h2 class="other">List of products</h2>
 
-<a asp-area="" asp-controller="Admin" asp-action="Insert">Add new product</a>
+<a class="product" asp-area="" asp-controller="Admin" asp-action="Insert">Add new product</a>
 
 @* The total amount of elements in the array *@
-<p>Total amount of products: <b>@Model.Count()</b></p>
+<p class="other">Total amount of products: <b class="other">@Model.Count()</b></p>
 
-<table class="table">
+<table class="table other">
     <thead>
         <tr>
             <th>

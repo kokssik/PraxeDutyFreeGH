@@ -5,6 +5,7 @@
     color: rgb(55, 55, 55);
     border: 0px;
     text-align: center center;
+    
 
 
 }
@@ -16,6 +17,7 @@
     border: 0px;
     transition-duration: 220ms;
     text-align: center center;
+
 
 }
 
@@ -37,5 +39,36 @@
     border: 0px;
     transition-duration: 220ms;
     text-align: center center;
+
     
+}
+.product {
+    border-radius: 8px;
+    background-color: white;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(55, 55, 55);
+    border: 0px;
+    text-align: center center;
+    padding: 4px 6px;
+    margin-left: -5px;
+    text-decoration: none;
+
+    
+}
+.product:hover {
+    border-radius: 8px;
+    background-color: rgb(47, 140, 73);
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    border: 0px;
+    transition-duration: 220ms;
+    text-align: center center;
+    padding: 4px 6px;
+    margin-left: -5px;
+    text-decoration: none;
+
+
+}
+.other {
+    font-family: 'Quicksand', sans-serif;
 }
