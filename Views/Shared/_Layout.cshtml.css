@@ -40,12 +40,15 @@ button.accept-policy {
 }
 
 .footer {
-  position: absolute;
+  position: static;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 50px;
-  opacity:0.6;
+  line-height: 45px;
+  opacity:0.8;
   filter:Alpha(opacity=60);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(15px);
+
 }
+
+
