@@ -6,6 +6,8 @@
 @{
 }
 
+    <link rel="stylesheet" href="~/css/Admin.css">
+
 <h2>List of products</h2>
 
 <a asp-area="" asp-controller="Admin" asp-action="Insert">Add new product</a>
@@ -28,6 +30,13 @@
             <th>
                 Pocet na skladě
             </th>
+            <th>
+                @* Button1 *@
+            </th>
+            <th>
+                @* ˇButton2 *@
+            </th>
+
         </tr>
     </thead>
     <tbody>
@@ -46,6 +55,12 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    <button class="edit">Edit</button>
+                </td>
+                <td>
+                    <button class="delete">Delete</button>
                 </td>
             </tr>
         }
