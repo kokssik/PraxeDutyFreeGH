@@ -9,10 +9,6 @@ namespace DutyFreePraxe.Controllers
     {
 
         // this variable has the data for the page called Products.cshtml
-        List<Models.Products> arr = new List<Models.Products>() {
-                new Models.Products {Name = "Anticol", ImageUrl = "https://images-ext-1.discordapp.net/external/lwFBBFEhAoiQ67cOOeMP5BCMkZ2vXE70Bif8G6c3Y10/https/lekarnacz.vshcdn.net/upload/an/ti/anticol-extra-strong-50g-3211-1945720-350x350-square.jpg", Price=10, Quantity=0} ,
-                new Models.Products {Name = "Birell", ImageUrl = "https://images-ext-1.discordapp.net/external/GsTg2VeLWxDQBbfjaNPfHxYyP7wk2mQ2qibs59JD0YM/https/secure.ce-tescoassets.com/assets/CZ/302/8594404001302/ShotType1_540x540.jpg", Price=5, Quantity=5} ,
-            };
         private readonly ILogger<AdminController> _logger;
 
         public AdminController(ILogger<AdminController> logger)
@@ -23,9 +19,20 @@ namespace DutyFreePraxe.Controllers
         // this function returns the HTML for the page called Products.cshtml
         public IActionResult Administration()
         {
+            List<Models.Products> arr = new List<Models.Products>();
 
+            using (var db = new StuffContext())
+            {
+                var query = from b in db.products
+                            orderby b.Name
+                            select b;
 
-            Debug.WriteLine("My debug string here");
+                foreach (var item in query)
+                {
+                    // Console.WriteLine(item.Name);
+                    arr.Add(new Models.Products { Name = item.Name, ImageUrl = item.ImageUrl, Price = item.Price, Quantity = item.Quantity });
+                }
+            }
 
             return View(arr); // print the Products.cshtml + Shared
         }
@@ -39,9 +46,6 @@ namespace DutyFreePraxe.Controllers
         public ActionResult Insert(Models.Products p)
         {
             // here are the data
-            // p.Name
-            // TODO: add to db or something
-            // arr.Add(new Models.Products { Name = p.Name, ImageUrl = p.ImageUrl, Price = p.Price, Quantity = p.Quantity }); // doesnt work TODO: fix
             using (var db = new StuffContext())
             {
                 var pro = new Models.Products
@@ -54,16 +58,6 @@ namespace DutyFreePraxe.Controllers
 
                 db.products.Add(pro);
                 db.SaveChanges(); // save changes to db
-
-                // Display all Blogs from the database
-                // var query = from b in db.products
-                //             orderby b.Name
-                //             select b;
-
-                // foreach (var item in query)
-                // {
-                //     Console.WriteLine(item.Name);
-                // }
 
             }
             return View();
