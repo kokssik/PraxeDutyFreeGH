@@ -4,13 +4,13 @@
 @{
 }
 
+<link rel="stylesheet" href="~/css/Admin.css">
 
-
-<h1>Add new product</h1>
+<h1 class="other">Add new product</h1>
 
 @using (Html.BeginForm("Insert", "Admin", FormMethod.Post))
 {
-    <table cellpadding="0" cellspacing="0">
+    <table class="other" cellpadding="0" cellspacing="0">
     <tr>
         <th colspan="2" align="center">Person Details</th>
     </tr>
@@ -39,7 +39,7 @@
         </td>
     </tr>
     <tr>
-        <td><input type="submit" value="Submit" /></td>
+        <td><input class="product" type="submit" value="Submit" /></td>
     </tr>
 </table>
 }
