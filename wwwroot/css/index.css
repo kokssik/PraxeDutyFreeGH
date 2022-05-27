@@ -9,7 +9,6 @@
 
 }
 
-
 .header2  {
     font-family: 'Quicksand', sans-serif;
     font-size: 22px;
@@ -22,5 +21,11 @@ body {
     background-size: cover;
     height: 540px;
     background-position: 50% 12%;
-    background-position: absolute;
+    background-position: top;
+    
+}
+
+.whitebox {
+    background-color: white;
+    background-position: 15% 50%;
 }
