@@ -40,6 +40,26 @@
         </tr>
     </thead>
     <tbody>
+        <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    @* <img height="100" src=@Html.DisplayFor(modelItem => item.ImageUrl) /> *@
+                </td>
+                <td>
+                    @* @Html.DisplayFor(modelItem => item.Price) *@
+                </td>
+                <td>
+                    @* @Html.DisplayFor(modelItem => item.Quantity) *@
+                </td>
+                <td>
+                    @* <button class="edit">Edit</button> *@
+                </td>
+                <td>
+                    @* <button class="delete">Delete</button> *@
+                </td>
+        </tr>
 
         @foreach (var item in Model)
         {
