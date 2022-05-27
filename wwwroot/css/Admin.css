@@ -11,7 +11,7 @@
 }
 .edit:hover {
     border-radius: 8px;
-    background-color: orange;
+    background-color: rgb(47, 140, 73);
     font-family: 'Quicksand', sans-serif;
     color: white;
     border: 0px;
