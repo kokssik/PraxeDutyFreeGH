@@ -31,4 +31,12 @@ body {
   font-size: 1.5vw;
   margin-left: 0.5vw;
   margin-right: 0.5vw;
+  color: black;
+}
+.menufont:hover {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5vw;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  color: rgb(232, 97, 7);
 }
