@@ -1,3 +1,12 @@
 .mogus {
     color: cyan;
 }
+
+.other {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
