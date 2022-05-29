@@ -56,6 +56,18 @@ namespace DutyFreePraxe.Controllers
             return RedirectToAction("Login", "Auth");
         }
 
+        [HttpPost]
+        public ActionResult Login(Models.Users p)
+        {
+            // here are the data
+            using (var db = new StuffContext())
+            {
+                var user = db.users.Single(h => h.Email == p.Email);
+                Console.WriteLine(user.Email);
+            }
+            return RedirectToAction("Login", "Auth");
+        }
+
 
         public IActionResult Login()
         {

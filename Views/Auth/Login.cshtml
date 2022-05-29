@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="~/css/Login.css">
 
 <h2 style="text-align: center">Login</h2>
-
-<form>
+@using (Html.BeginForm("Login", "Auth", FormMethod.Post))
+{
     <table class="center">
         <tbody>
             <tr>
@@ -14,7 +14,7 @@
                 </td>
 
                 <td>
-                    <input type="text" placeholder="E-mail">
+                    <input type="text" name="Email" placeholder="E-mail" />
                 </td>
             </tr>
 
@@ -24,9 +24,14 @@
                 </td>
 
                 <td>
-                    <input type="text" placeholder="Heslo">
+                    <input type="text" name="Password" placeholder="Heslo" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="product" type="submit" value="Submit"/>
                 </td>
             </tr>
         </tbody>
     </table>
-</form>
+}
