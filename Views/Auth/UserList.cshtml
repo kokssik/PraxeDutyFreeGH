@@ -1,7 +1,21 @@
 @model IEnumerable<DutyFreePraxe.Models.Users>
 
-<h1>List of registered users:</h1><br/>
-<table>
+<h1 style="text-align: center">List of registered users:</h1><br/>
+<table class="table other">
+            <tr>
+                <th>
+                    Jméno:
+                </th>
+                <th>
+                    Obrazek (WIP):
+                </th>
+                <th>
+                    Email:
+                </th>
+                <th>
+                    Heslo:
+                </th>
+            </tr>
         @foreach (var item in Model)
         {
             <tr>
@@ -16,9 +30,6 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Password)
-                </td>
-                <td>
-                    <input class="product" type="submit" value="Submit"/>
                 </td>
             </tr>
         }
