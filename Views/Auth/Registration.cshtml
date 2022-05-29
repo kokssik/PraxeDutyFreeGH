@@ -1,4 +1,4 @@
-@model IEnumerable<DutyFreePraxe.Models.Users>
+@model DutyFreePraxe.Models.Users
 
 @{
 }
@@ -9,7 +9,8 @@
 
 <h1>Register here:</h1><br/>
 
-<form action="@Url.Action("Insert")" method="post">
+@using (Html.BeginForm("Registration", "Auth", FormMethod.Post))
+{
     <table class="center">
         <tbody>
             <tr>
@@ -48,4 +49,4 @@
             </tr>
         </tbody>
     </table>
-</form>
+}

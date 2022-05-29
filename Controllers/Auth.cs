@@ -15,7 +15,7 @@ namespace DutyFreePraxe.Controllers
         }
 
         // Bellow code for form integration:
-        public IActionResult Index()
+        public IActionResult UserList()
         {
                 List<Models.Users> arr = new List<Models.Users>();
 
@@ -33,10 +33,36 @@ namespace DutyFreePraxe.Controllers
             return View(arr);
         }
 
+        [HttpPost]
+        public ActionResult Registration(Models.Users p)
+        {
+            // here are the data
+            using (var db = new StuffContext())
+            {
+                // TODO: add all fields
+                var pro = new Models.Users
+                {
+                    Name = p.Name,
+                    // ImageUrl = p.ImageUrl,
+                    Email = p.Email,
+                    Password = p.Password,
+                    Role = 0
+                };
 
+                db.users.Add(pro);
+                db.SaveChanges(); // save changes to db
+
+            }
+            return RedirectToAction("Login", "Auth");
+        }
 
 
         public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Registration()
         {
             return View();
         }
