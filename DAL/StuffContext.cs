@@ -18,5 +18,7 @@ namespace DutyFreePraxe.DAL
 
         public DbSet<Models.Products> products { get; set; }
 
+        public DbSet<Models.Users> users { get; set; }
+
     }
 }
