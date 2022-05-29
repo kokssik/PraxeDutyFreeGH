@@ -1,0 +1,25 @@
+@model IEnumerable<DutyFreePraxe.Models.Users>
+
+<h1>Test - List of registered users:</h1><br/>
+<table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <img height="100" src=@Html.DisplayFor(modelItem => item.ImageUrl) />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    <button class="edit">Edit</button>
+                </td>
+            </tr>
+        }
+</table>

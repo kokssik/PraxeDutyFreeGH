@@ -1,3 +1,4 @@
+using DutyFreePraxe.DAL;
 using DutyFreePraxe.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -12,6 +13,28 @@ namespace DutyFreePraxe.Controllers
         {
             _logger = logger;
         }
+
+        // Bellow code for form integration:
+        public IActionResult Index()
+        {
+                List<Models.Users> arr = new List<Models.Users>();
+
+                using (var db = new StuffContext())
+                {
+                    var query = from b in db.users
+                                orderby b.UserID
+                                select b;
+
+                    foreach (var item in query)
+                    {
+                            arr.Add(new Models.Users { UserID = item.UserID, Name = item.Name, ImageUrl = item.ImageUrl, Email = item.Email, Password = item.Password });
+                    }
+                }
+            return View(arr);
+        }
+
+
+
 
         public IActionResult Login()
         {

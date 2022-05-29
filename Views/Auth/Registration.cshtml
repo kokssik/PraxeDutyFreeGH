@@ -1,3 +1,5 @@
+@model IEnumerable<DutyFreePraxe.Models.Users>
+
 @{
 }
 
@@ -7,7 +9,7 @@
 
 <h1>Register here:</h1><br/>
 
-<form>
+<form action="@Url.Action("Insert")" method="post">
     <table class="center">
         <tbody>
             <tr>
@@ -16,7 +18,7 @@
                 </td>
 
                 <td>
-                    
+                    <input type="text" name="Name" placeholder="Jméno"> <!--Name-->
                 </td>
             </tr>
 
@@ -26,7 +28,7 @@
                 </td>
 
                 <td>
-                    
+                    <input type="text" name="Email" placeholder="E-mail"> <!--Mail-->
                 </td>
             </tr>
 
@@ -36,7 +38,12 @@
                 </td>
 
                 <td>
-                    
+                    <input type="text" name="Password" placeholder="Heslo"> <!--Password-->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <input class="product" type="submit" value="Submit" /> <!--Submit button-->
                 </td>
             </tr>
         </tbody>
