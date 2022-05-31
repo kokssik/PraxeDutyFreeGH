@@ -43,18 +43,23 @@
         <form action="@Url.Action("Insert")" method="post">
             <tr>
                     <td>
+                        <br/>
                         <input type="text" name="Name" id="" placeholder="Productname"> <!--Product name-->
                     </td>
                     <td>
-                        <input type="text" name="ImageUrl" id="" placeholder="Image URL"> <!--Picture-->
+                        <input type="text" name="ImageUrl" id="" placeholder="Image URL"><br/> <!--Picture-->
+                        <input type="file" name="Image" placeholder="Select File" >
                     </td>
                     <td>
+                        <br/>
                         <input type="text" name="Price" id="" placeholder="Price"> <!--Price-->
                     </td>
                     <td>
+                        <br/>
                         <input type="text" name="Quantity" id="" placeholder="Quantity"> <!--Quantity-->
                     </td>
                     <td>
+                        
                         <input class="product" type="submit" value="Submit" /><!--<button class="edit">Submit</button> Submit button-->
                     </td>
             </tr>
