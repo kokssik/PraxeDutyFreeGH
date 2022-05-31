@@ -28,5 +28,8 @@ public class Products
 
     [NotMapped]
     public IFormFile? Image { get; set; }
+
+
+    public ICollection<Orders> Orders { get; set; }
 }
 

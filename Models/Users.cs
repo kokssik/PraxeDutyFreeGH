@@ -17,4 +17,7 @@ public class Users
     public int Role { get; set; }
 
     public String? Password { get; set; }
+
+
+    public ICollection<Orders> Orders { get; set; }
 }

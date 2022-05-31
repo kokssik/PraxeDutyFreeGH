@@ -1,0 +1,131 @@
+@* @model IEnumerable<DutyFreePraxe.Models.Users> <!-- Add after repairing models--> *@
+
+@{
+}
+
+    <link rel="stylesheet" href="~/css/Admin.css">
+
+<h1 class="other">All orders:</h1>
+
+@* The total amount of elements in the array *@
+@* <p class="other">Total amount of products: <b class="other">@Model.Count()</b></p> <-- We can keep this afterwards *@
+
+<table class="table other">
+    <thead>
+        <tr>
+            <th>
+                Datum:
+            </th>
+            <th>
+                Čas:
+            </th>
+            <th>
+                Jméno:
+            </th>
+            <th>
+                Produkt:
+            </th>
+            <th>
+                Cena:
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @* @foreach (var item in Model)
+        { *@
+            <tr>
+                <td>
+                    10.4.1998
+                </td>
+                <td>
+                    4:20
+                </td>
+                <td>
+                    Pavel Pavlovič Pavlenko
+                </td>
+                <td>
+                    Teleskopický obušek Deluxe
+                </td>
+                <td>
+                    990
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    10.4.1998
+                </td>
+                <td>
+                    4:20
+                </td>
+                <td>
+                    Ivan Ivanovič Ivanov
+                </td>
+                <td>
+                    Teleskopický obušek Deluxe
+                </td>
+                <td>
+                    990
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    10.4.1998
+                </td>
+                <td>
+                    4:20
+                </td>
+                <td>
+                    Dízel Benzinovič Naftalenko
+                </td>
+                <td>
+                    Teleskopický obušek Deluxe
+                </td>
+                <td>
+                    990
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    10.4.1998
+                </td>
+                <td>
+                    4:20
+                </td>
+                <td>
+                    Sergej Sergejovič Sergejov
+                </td>
+                <td>
+                    Teleskopický obušek Deluxe
+                </td>
+                <td>
+                    990
+                </td>
+            </tr>
+        @* } *@
+    </tbody>
+</table>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+<script>
+
+    $(document).ready(() => {
+        $(document).on('click', '.btn-delete', deleteProduct);
+    });
+
+    function deleteProduct() {
+        let id = $(this).data('id');
+
+        // send the data to the server
+        $.post("/Admin/Delete",
+        {
+            id: id
+        });
+
+        $(this).closest('tr').remove();
+    }
+</script>

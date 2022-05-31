@@ -33,43 +33,38 @@ namespace DutyFreePraxe.Controllers
             return View(arr);
         }
 
-        [HttpPost]
-        public ActionResult Registration(Models.Orders p)
-        {
-            // here are the data
-            using (var db = new StuffContext())
-            {
-                // TODO: add all fields
-                var pro = new Models.Orders
-                {
-                    OrderID = p.OrderID,
-                    Name = p.Name,
-                    Price = p.Price,
-                    UserID = p.UserID,
-                    ProductID = p.ProductID
-                };
-
-                db.orders.Add(pro);
-                db.SaveChanges(); // save changes to db
-
-            }
-            return RedirectToAction("MakeOrder", "Orders");
-        }
-
         // [HttpPost]
-        // public ActionResult Login(Models.Users p)
+        // public ActionResult Registration(Models.Orders p)
         // {
         //     // here are the data
         //     using (var db = new StuffContext())
         //     {
-        //         var user = db.users.Single(h => h.Email == p.Email);
-        //         Console.WriteLine(user.Email);
+        //         // TODO: add all fields
+        //         var pro = new Models.Orders
+        //         {
+        //             OrderID = p.OrderID,
+        //             Name = p.Name,
+        //             Price = p.Price,
+        //             UserID = p.UserID,
+        //             ProductID = p.ProductID
+        //         };
+
+        //         db.orders.Add(pro);
+        //         db.SaveChanges(); // save changes to db
+
         //     }
-        //     return RedirectToAction("Login", "Auth");
+        //     return RedirectToAction("MakeOrder", "Orders");
         // }
 
 
+
+
         public IActionResult MakeOrder()
+        {
+            return View();
+        }
+
+                public IActionResult MyOrders()
         {
             return View();
         }

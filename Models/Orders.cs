@@ -14,7 +14,11 @@ public class Orders
 
     public int Price { get; set; }
 
+    public int ProductID { get; set; }
+
+    public Models.Products Products { get; set; }
+
     public int UserID { get; set; }
 
-    public int ProductID { get; set; }
+    public Models.Users Users { get; set; }
 }
