@@ -14,31 +14,6 @@ namespace DutyFreePraxe.Controllers
             _logger = logger;
         }
 
-       
-       
-        // public IActionResult Home()
-        //         {
-        //             List<Models.Products> arr = new List<Models.Products>();
-
-        //             using (var db = new StuffContext())
-        //             {
-        //                 var query = from b in db.products
-        //                             orderby b.ProductID
-        //                             select b;
-
-        //                 foreach (var item in query)
-        //                 {
-        //                     // Console.WriteLine(item.Name);
-        //                     // TODO: add all fields
-        //                     if (item.IsDeleted != true)
-        //                         arr.Add(new Models.Products { ProductID = item.ProductID, Name = item.Name, ImageUrl = item.ImageUrl, Price = item.Price, Quantity = item.Quantity });
-        //                 }
-        //             }
-        //             return View(arr);
-        //         }
-                
-
-
         public IActionResult Index()
         {
                                 List<Models.Products> arr = new List<Models.Products>();
