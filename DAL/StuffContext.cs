@@ -16,9 +16,10 @@ namespace DutyFreePraxe.DAL
             optionsBuilder.UseSqlite(@"DataSource=mydatabase.db;");
         }
 
-        public DbSet<Models.Products> products { get; set; }
+        public DbSet<Models.Products>? products { get; set; }
 
-        public DbSet<Models.Users> users { get; set; }
+        public DbSet<Models.Users>? users { get; set; }
+        public DbSet<Models.Orders>? orders { get; set; }
 
     }
 }

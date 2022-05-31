@@ -18,15 +18,18 @@ public class Products
 
     public bool IsDeleted { get; set; }
 
-    public String Name { get; set; }
+    public String? Name { get; set; }
 
     public int Price { get; set; }
 
     public int Quantity { get; set; }
 
-    public String ImageUrl { get; set; }
+    public String? ImageUrl { get; set; }
 
     [NotMapped]
-    public IFormFile Image { get; set; }
+    public IFormFile? Image { get; set; }
+
+
+    public ICollection<Orders> Orders { get; set; }
 }
 
