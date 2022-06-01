@@ -72,3 +72,7 @@
 .other {
     font-family: 'Quicksand', sans-serif;
 }
+
+.center {
+    align-content: center;
+}

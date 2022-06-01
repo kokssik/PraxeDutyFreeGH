@@ -3,10 +3,10 @@
 
 <link rel="stylesheet" href="~/css/Login.css">
 
-<h2 style="text-align: center">Login</h2>
+<h2 class="other" style=" text-align: center">Login</h2>
 @using (Html.BeginForm("Login", "Auth", FormMethod.Post))
 {
-    <table class="center">
+    <table class="center other">
         <tbody>
             <tr>
                 <td>
@@ -29,7 +29,7 @@
             </tr>
             <tr>
                 <td>
-                    <input class="product" type="submit" value="Submit"/>
+                    <input class="product" type="submit" value="Log in"/>
                 </td>
             </tr>
         </tbody>

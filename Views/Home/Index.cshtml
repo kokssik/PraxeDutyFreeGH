@@ -24,22 +24,24 @@
             <div class="col">
                     <div class="card text-center " style="background-color:#c9c9c9;">
                             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="@Html.DisplayFor(modelItem => item.ImageUrl)" class="img-fluid"/>
+                                <img class="imgsize" src="@Html.DisplayFor(modelItem => item.ImageUrl)" class="img-fluid"/>
                                 <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
                                 </a>
                             </div>
 
-                            <div class="card-body">
+                            <div class="cardzise card-body">
                                 <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
                                 <p class="card-text">
                                 <bold>Cena:</bold> @Html.DisplayFor(modelItem => item.Price) <br/>
                                 <bold>Na skladě:</bold> @Html.DisplayFor(modelItem => item.Quantity)<br/>
                                 </p>
 
-                                <button type="button" class="btn btn-primary">Objednat</button>
+                                <button type="button" class="buttonpos btn btn-primary">Objednat</button>
                             </div>
                     </div>
             </div>
     }
 </div>
+
+

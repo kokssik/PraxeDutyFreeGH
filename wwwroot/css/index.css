@@ -29,3 +29,23 @@ body {
     background-color: white;
     background-position: 15% 50%;
 }
+
+.imgsize {
+    min-height: 220px;
+    max-height: 220px;
+    min-width: 220px;
+    max-width: 220px;
+
+}
+.cardzise {
+    min-height: 220px;
+    max-height: 220px;
+
+
+}
+.buttonpos {
+    position: absolute;
+    top: 370px;
+    right: 105px;
+
+}
