@@ -66,6 +66,37 @@ namespace DutyFreePraxe.Controllers
             return Ok();
         }
 
+
+        [HttpPost]
+        public IActionResult Edit()
+        {
+            // string d = Request.Form["id"];
+            int ProductID = Int32.Parse(Request.Form["ProductID"]);
+            int Quantity = Int32.Parse(Request.Form["Quantity"]);
+            int Price = Int32.Parse(Request.Form["Price"]);
+            string Name = Request.Form["Name"];
+            string ImageUrl = Request.Form["ImageUrl"];
+
+            // Console.WriteLine(ProductID.ToString() + " " + Quantity.ToString() + " " + Price.ToString() + " " + Name + " " + ImageUrl);
+
+            using (var db = new StuffContext())
+            {
+                var result = db.products.SingleOrDefault(b => b.ProductID == ProductID);
+                if (result != null)
+                {
+                    Console.WriteLine("Saving to DB");
+                    result.ProductID = ProductID;
+                    result.Quantity = Quantity;
+                    result.Price = Price;
+                    result.Name = Name;
+                    result.ImageUrl = ImageUrl;
+                    db.SaveChanges();
+                }
+            }
+
+            return Ok();
+        }
+
         [HttpPost]
         public ActionResult Insert(Models.Products p)
         {
