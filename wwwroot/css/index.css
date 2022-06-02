@@ -44,8 +44,8 @@ body {
 
 }
 .buttonpos {
-    position: absolute;
-    top: 370px;
-    right: 105px;
+    position: relative;
+    top: 25px;
+    right: 0px;
 
 }
